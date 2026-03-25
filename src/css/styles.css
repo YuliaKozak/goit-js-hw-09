@@ -35,3 +35,69 @@ ul.gallery {
 .gallery-link {
   text-decoration: none;
 }
+
+
+.feedback-form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+  max-width: 408px;
+}
+
+.feedback-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #2e2f42;
+  margin-bottom: 8px;
+}
+
+.feedback-form input,
+.feedback-form textarea {
+  width: 100%;
+  padding: 8px 16px;
+  border: 1px solid #8e8e93;
+  border-radius: 4px;
+  font-size: 16px;
+  outline: none;
+  transition: border 200ms ease;
+}
+
+/* Стан hover — товстіша чорна лінія */
+.feedback-form input:hover,
+.feedback-form textarea:hover {
+  border: 2px solid #000000;
+  padding: 7px 15px;
+  /* Компенсація товщини, щоб текст не стрибав */
+}
+
+/* Стан active (focus) — синя лінія */
+.feedback-form input:focus,
+.feedback-form textarea:focus {
+  border: 1px solid #4d5ae5;
+  padding: 8px 16px;
+}
+
+.feedback-form button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 16px;
+  width: 95px;
+  height: 40px;
+  background-color: #4d5ae5;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 200ms ease;
+}
+
+.feedback-form button:hover {
+  background-color: #7d85f5;
+}
