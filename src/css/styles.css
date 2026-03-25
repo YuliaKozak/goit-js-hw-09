@@ -52,7 +52,7 @@ ul.gallery {
   font-family: "Montserrat", sans-serif;
   font-size: 16px;
   line-height: 1.5;
-  color: #2e2f42;
+  color: #808080;
   margin-bottom: 8px;
 }
 
@@ -60,7 +60,7 @@ ul.gallery {
 .feedback-form textarea {
   width: 100%;
   padding: 8px 16px;
-  border: 1px solid #8e8e93;
+  border: 1px solid #808080;
   border-radius: 4px;
   font-size: 16px;
   outline: none;
@@ -70,15 +70,15 @@ ul.gallery {
 /* Стан hover — товстіша чорна лінія */
 .feedback-form input:hover,
 .feedback-form textarea:hover {
-  border: 2px solid #000000;
+  border: 1px solid #000000;
   padding: 7px 15px;
   /* Компенсація товщини, щоб текст не стрибав */
 }
 
-/* Стан active (focus) — синя лінія */
+
 .feedback-form input:focus,
 .feedback-form textarea:focus {
-  border: 1px solid #4d5ae5;
+  border: 1px solid #808080;
   padding: 8px 16px;
 }
 
@@ -89,7 +89,7 @@ ul.gallery {
   padding: 8px 16px;
   width: 95px;
   height: 40px;
-  background-color: #4d5ae5;
+  background-color: #4E75FF;
   color: #ffffff;
   border: none;
   border-radius: 8px;
@@ -99,5 +99,5 @@ ul.gallery {
 }
 
 .feedback-form button:hover {
-  background-color: #7d85f5;
+  background-color: #6C8CFF;
 }
