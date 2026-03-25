@@ -2,7 +2,7 @@ const storageKey = "feedback-form-state";
 
 const form = document.querySelector(".feedback-form");
 
-let data = {
+let formData = {
   email: "",
   message: ""
 };
@@ -13,11 +13,11 @@ const fromStorage = localStorage.getItem(storageKey);
 if (fromStorage) {
   const parsed = JSON.parse(fromStorage);
 
-  data.email = parsed.email || "";
-  data.message = parsed.message || "";
+  formData.email = parsed.email || "";
+  formData.message = parsed.message || "";
 
-  form.elements.email.value = data.email;
-  form.elements.message.value = data.message;
+  form.elements.email.value = formData.email;
+  form.elements.message.value = formData.message;
 }
 
 // слухаємо всі інпути
@@ -25,9 +25,9 @@ form.addEventListener("input", function (e) {
   const name = e.target.name;
 
   if (name === "email" || name === "message") {
-    data[name] = e.target.value;
+    formData[name] = e.target.value;
 
-    localStorage.setItem(storageKey, JSON.stringify(data));
+    localStorage.setItem(storageKey, JSON.stringify(formData));
   }
 });
 
@@ -35,17 +35,17 @@ form.addEventListener("input", function (e) {
 form.addEventListener("submit", function (e) {
   e.preventDefault();
 
-  if (data.email.trim() === "" || data.message.trim() === "") {
+  if (formData.email.trim() === "" || formData.message.trim() === "") {
     alert("Fill please all fields");
     return;
   }
 
-  console.log(data);
+  console.log(formData);
 
   localStorage.removeItem(storageKey);
 
-  data.email = "";
-  data.message = "";
+  formData.email = "";
+  formData.message = "";
 
   form.reset();
 });
